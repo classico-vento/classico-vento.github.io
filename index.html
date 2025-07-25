@@ -19,34 +19,54 @@
       background-color: #fff;
     }
 
+    /* White background Welcome Card */
+    .welcome-card {
+      background-color: #fff;
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+
+    .welcome-card h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 60px;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #f6e27a, #f9d423, #f6ba52, #eab308);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 5s linear infinite;
+    }
+
+    .welcome-card p {
+      font-size: 20px;
+      color: #222;
+    }
+
+    /* Background Image Section */
     .hero {
       background-image: url('bg.jpg');
       background-size: cover;
       background-position: center;
       height: 100vh;
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
       text-align: center;
+      padding: 20px;
       color: #fff;
-      padding-top: 60px;
     }
 
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 60px;
-      background: linear-gradient(90deg, #f6e27a, #f9d423, #f6ba52, #eab308);
-      background-size: 200% auto;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: shine 5s linear infinite;
-      margin-bottom: 10px;
+    .hero-content {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 40px 30px;
+      border-radius: 12px;
+      max-width: 800px;
+      margin: auto;
     }
 
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 30px;
+    .hero-content p {
+      font-size: 20px;
+      line-height: 1.7;
     }
 
     @keyframes shine {
@@ -54,53 +74,35 @@
       100% { background-position: 200% center; }
     }
 
-    .welcome {
-      background-color: #fff;
-      padding: 50px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .welcome h2 {
-      font-size: 28px;
-      color: #222;
-      margin-bottom: 20px;
-    }
-
-    .welcome p {
-      font-size: 17px;
-      color: #333;
-      line-height: 1.7;
-    }
-
     @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 40px;
+      .welcome-card h1 {
+        font-size: 42px;
       }
 
-      .welcome {
-        padding: 30px 15px;
-      }
-
-      .welcome h2 {
-        font-size: 24px;
+      .welcome-card p,
+      .hero-content p {
+        font-size: 16px;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="hero">
+  <!-- White Background Welcome Section -->
+  <div class="welcome-card">
     <h1>Classico Vento</h1>
-    <p>Where leather meets legacy</p>
+    <p>Those who wear confidence, not trends.</p>
   </div>
 
-  <div class="welcome">
-    <h2>Welcome to Classico Vento</h2>
-    <p>
-      At Classico Vento, we don’t just craft leather — we shape a legacy. Inspired by timeless elegance and the strength of character, our creations are a statement for those who value distinction over noise. Every piece tells a story — of heritage, passion, and bold individuality. For the ones who choose class, not chaos. For those who wear confidence, not trends. This is not just leather. This is Classico Vento — where legacy lives on.
-    </p>
+  <!-- Background Image Section with Text -->
+  <div class="hero">
+    <div class="hero-content">
+      <p>
+        Welcome to a world where class speaks louder than chaos.<br><br>
+        At Classico Vento, we don’t just craft leather — we shape a legacy. Inspired by timeless elegance and the strength of character, our creations are a statement for those who value distinction over noise.<br><br>
+        Every piece tells a story — of heritage, passion, and bold individuality. This is not just leather. This is Classico Vento — where legacy lives on.
+      </p>
+    </div>
   </div>
 
 </body>
