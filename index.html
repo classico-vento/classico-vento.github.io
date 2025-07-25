@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Classico Vento | Premium Leather</title>
 
-  <!-- Fonts -->
+  <!-- Playfair for Title -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <!-- Montserrat for Subtitle -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
-      font-family: 'Montserrat', sans-serif;
+      box-sizing: border-box;
     }
 
-    .text-section {
-      background-color: white;
+    body {
+      background: url('bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      color: #fff;
       text-align: center;
-      padding: 50px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     h1 {
@@ -30,7 +37,7 @@
       -webkit-text-fill-color: transparent;
       font-weight: 700;
       animation: shine 5s linear infinite;
-      margin: 0;
+      margin-bottom: 10px;
     }
 
     @keyframes shine {
@@ -39,49 +46,24 @@
     }
 
     p {
+      font-family: 'Montserrat', sans-serif;
       font-size: 18px;
-      color: #000;
-      margin-top: 10px;
+      color: #ffffff;
       letter-spacing: 1px;
     }
 
-    .image-section {
-      width: 100%;
-      min-height: 100vh;
-      background-image: url('bg.jpg');
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-    }
-
-    @media screen and (max-width: 768px) {
+    @media (max-width: 600px) {
       h1 {
         font-size: 40px;
       }
-
       p {
         font-size: 16px;
-      }
-
-      .text-section {
-        padding: 30px 15px;
-      }
-
-      .image-section {
-        background-attachment: scroll;
       }
     }
   </style>
 </head>
 <body>
-
-  <div class="text-section">
-    <h1>Classico Vento</h1>
-    <p>Where leather meets legacy</p>
-  </div>
-
-  <div class="image-section"></div>
-
+  <h1>Classico Vento</h1>
+  <p>Where leather meets legacy</p>
 </body>
 </html>
