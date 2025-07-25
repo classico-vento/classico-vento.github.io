@@ -47,10 +47,12 @@
 
     .image-section {
       width: 100%;
-      height: 100vh;
+      min-height: 100vh;
       background-image: url('bg.jpg');
       background-size: cover;
-      background-position: center;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
     }
 
     @media screen and (max-width: 768px) {
@@ -64,6 +66,10 @@
 
       .text-section {
         padding: 30px 15px;
+      }
+
+      .image-section {
+        background-attachment: scroll;
       }
     }
   </style>
