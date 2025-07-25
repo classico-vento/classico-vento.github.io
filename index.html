@@ -6,7 +6,7 @@
 
   <!-- Playfair for Title -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  
+
   <!-- Montserrat for Subtitle -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
@@ -14,43 +14,56 @@
     body {
       margin: 0;
       padding: 0;
-      height: 100vh;
-      background-image: url('bg.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      text-align: center;
-      color: #ffffff;
-    }
-
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 60px;
-      font-weight: 700;
-      margin-top: 180px;
-      background: linear-gradient(90deg, #f6e27a, #f9d423, #f6ba52, #eab308);
-      background-size: 200% auto;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: shine 5s linear infinite;
-    }
-
-    @keyframes shine {
-      0% { background-position: 0% center; }
-      100% { background-position: 200% center; }
-    }
-
-    p {
       font-family: 'Montserrat', sans-serif;
-      font-size: 20px;
-      margin-top: -10px;
-      color: #ffffff;
+    }
+
+    .hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .text-section {
+      background-color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .text-section h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .text-section p {
+      font-size: 18px;
+      color: #333;
       letter-spacing: 1px;
+    }
+
+    @media (max-width: 768px) {
+      .text-section h1 {
+        font-size: 36px;
+      }
+      .text-section p {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Classico Vento</h1>
-  <p>Where leather meets legacy</p>
+
+  <!-- 👇 Image as normal <img> -->
+  <div class="hero">
+    <img src="bg.jpg" alt="Background Banner">
+  </div>
+
+  <!-- 👇 Text below the image -->
+  <div class="text-section">
+    <h1>Classico Vento</h1>
+    <p>Where leather meets legacy</p>
+  </div>
+
 </body>
 </html>
