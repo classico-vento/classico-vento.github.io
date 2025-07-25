@@ -19,7 +19,7 @@
       background-color: #fff;
     }
 
-    /* NEW White Welcome Top Section */
+    /* Top white welcome section */
     .top-welcome {
       background-color: #fff;
       text-align: center;
@@ -42,6 +42,7 @@
       color: #222;
     }
 
+    /* Hero Section */
     .hero {
       background-image: url('bg.jpg');
       background-size: cover;
@@ -49,28 +50,14 @@
       height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
       text-align: center;
       color: #fff;
-      padding-top: 60px;
+      padding: 0 20px;
     }
 
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 60px;
-      background: linear-gradient(90deg, #f6e27a, #f9d423, #f6ba52, #eab308);
-      background-size: 200% auto;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: shine 5s linear infinite;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 30px;
-    }
+    /* Removed text from hero section */
 
     @keyframes shine {
       0% { background-position: 0% center; }
@@ -98,10 +85,6 @@
     }
 
     @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 40px;
-      }
-
       .top-welcome h1 {
         font-size: 42px;
       }
@@ -122,19 +105,18 @@
 </head>
 <body>
 
-  <!-- White background Classico Vento welcome text -->
+  <!-- Top White Welcome Section -->
   <div class="top-welcome">
-    <h1>Classico Vento</h1>
-    <p>Those who wear confidence, not trends.</p>
-  </div>
-
-  <!-- Background image section -->
-  <div class="hero">
     <h1>Classico Vento</h1>
     <p>Where leather meets legacy</p>
   </div>
 
-  <!-- Welcome paragraph -->
+  <!-- Hero Section with Background Image -->
+  <div class="hero">
+    <!-- No text here -->
+  </div>
+
+  <!-- Welcome Text Paragraph -->
   <div class="welcome">
     <h2>Welcome to Classico Vento</h2>
     <p>
