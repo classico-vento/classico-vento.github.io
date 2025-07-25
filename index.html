@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Classico Vento</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat&display=swap" rel="stylesheet" />
 
   <style>
     * {
@@ -19,45 +19,32 @@
       background-color: #fff;
     }
 
-    /* Top white welcome section */
-    .top-welcome {
-      background-color: #fff;
-      text-align: center;
-      padding: 60px 20px 40px;
-    }
-
-    .top-welcome h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 60px;
-      margin-bottom: 10px;
-      background: linear-gradient(90deg, #f6e27a, #f9d423, #f6ba52, #eab308);
-      background-size: 200% auto;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: shine 5s linear infinite;
-    }
-
-    .top-welcome p {
-      font-size: 20px;
-      color: #222;
-    }
-
-    /* Hero Section */
     .hero {
-      background-image: url('bg.jpg');
-      background-size: cover;
-      background-position: center;
+      background-color: #000;
       height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      color: #fff;
-      padding: 0 20px;
+      padding: 60px 20px;
     }
 
-    /* Removed text from hero section */
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 60px;
+      background: linear-gradient(90deg, #f6e27a, #f9d423, #f6ba52, #eab308);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 5s linear infinite;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #fff;
+    }
 
     @keyframes shine {
       0% { background-position: 0% center; }
@@ -85,12 +72,8 @@
     }
 
     @media (max-width: 768px) {
-      .top-welcome h1 {
-        font-size: 42px;
-      }
-
-      .top-welcome p {
-        font-size: 16px;
+      .hero h1 {
+        font-size: 40px;
       }
 
       .welcome {
@@ -105,18 +88,11 @@
 </head>
 <body>
 
-  <!-- Top White Welcome Section -->
-  <div class="top-welcome">
+  <div class="hero">
     <h1>Classico Vento</h1>
     <p>Where leather meets legacy</p>
   </div>
 
-  <!-- Hero Section with Background Image -->
-  <div class="hero">
-    <!-- No text here -->
-  </div>
-
-  <!-- Welcome Text Paragraph -->
   <div class="welcome">
     <h2>Welcome to Classico Vento</h2>
     <p>
