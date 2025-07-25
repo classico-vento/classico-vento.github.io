@@ -19,13 +19,13 @@
       font-family: 'Montserrat', sans-serif;
     }
 
-    .top-section {
-      background-color: #ffffff;
+    .text-section {
+      background-color: white;
       text-align: center;
-      padding: 100px 20px 60px;
+      padding: 60px 20px 40px;
     }
 
-    .top-section h1 {
+    .text-section h1 {
       font-family: 'Playfair Display', serif;
       font-size: 60px;
       background: linear-gradient(90deg, #f6e27a, #f9d423, #f6ba52, #eab308);
@@ -36,45 +36,52 @@
       animation: shine 5s linear infinite;
     }
 
-    @keyframes shine {
-      0% { background-position: 0% center; }
-      100% { background-position: 200% center; }
-    }
-
-    .top-section p {
-      font-size: 20px;
+    .text-section p {
+      font-size: 18px;
       color: #000;
       margin-top: 10px;
       letter-spacing: 1px;
     }
 
+    @keyframes shine {
+      0% { background-position: 0% center; }
+      100% { background-position: 200% center; }
+    }
+
     .image-section {
-      height: 100vh;
+      min-height: 100vh;
       background-image: url('bg.jpg');
       background-size: cover;
-      background-position: center;
+      background-position: center top;
       background-repeat: no-repeat;
+      background-attachment: fixed;
     }
 
     @media (max-width: 768px) {
-      .top-section h1 {
+      .text-section h1 {
         font-size: 40px;
       }
 
-      .top-section p {
+      .text-section p {
         font-size: 16px;
+      }
+
+      .image-section {
+        background-attachment: scroll;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="top-section">
+  <div class="text-section">
     <h1>Classico Vento</h1>
     <p>Where leather meets legacy</p>
   </div>
 
-  <div class="image-section"></div>
+  <div class="image-section">
+    <!-- Background image shows here -->
+  </div>
 
 </body>
 </html>
