@@ -4,92 +4,158 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Classico Vento</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Montserrat', sans-serif;
-      background-color: #111;
-      color: #fff;
-      scroll-behavior: smooth;
+      color: #111;
+      background-color: #fff;
     }
+
     header {
-      background: #000;
+      background: black;
+      color: white;
+      padding: 20px;
       text-align: center;
-      padding: 100px 20px 60px;
+      position: relative;
     }
+
     header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 60px;
-      background: linear-gradient(90deg, #f6e27a, #f9d423, #f6ba52, #eab308);
-      background-size: 200% auto;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: shine 5s linear infinite;
+      font-size: 48px;
+      letter-spacing: 2px;
     }
+
     header p {
-      font-size: 20px;
+      font-size: 18px;
       margin-top: 10px;
-      color: #fff;
+      font-weight: 300;
     }
+
     nav {
-      background-color: #1a1a1a;
-      padding: 10px 20px;
       display: flex;
       justify-content: center;
       gap: 30px;
-      font-weight: 600;
+      background: #111;
+      padding: 15px;
     }
+
     nav a {
-      color: #fff;
+      color: white;
       text-decoration: none;
+      font-weight: 500;
     }
-    nav a:hover {
-      color: #f6e27a;
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1542060748-10c28b62716d') no-repeat center/cover;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      position: relative;
     }
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
+
+    .hero h2 {
+      font-size: 50px;
+      font-weight: 700;
+      background: rgba(0,0,0,0.5);
+      padding: 20px;
     }
-    h2 {
+
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .section h3 {
       font-size: 32px;
       margin-bottom: 20px;
-      color: #f6e27a;
     }
-    .gallery {
+
+    .section p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .products {
       display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
       justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 40px;
     }
-    .gallery img {
-      width: 300px;
+
+    .product {
+      width: 280px;
+      border: 1px solid #ddd;
       border-radius: 8px;
-      object-fit: cover;
+      overflow: hidden;
+      transition: 0.3s ease;
     }
-    footer {
-      background-color: #000;
+
+    .product img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .product h4 {
+      padding: 15px;
+      font-size: 20px;
+    }
+
+    .video-section video {
+      width: 100%;
+      height: auto;
+    }
+
+    .newsletter {
+      background: #000;
+      color: white;
+      padding: 60px 20px;
+    }
+
+    .newsletter h3 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .newsletter input {
+      padding: 10px;
+      width: 250px;
+      margin: 10px;
+    }
+
+    .footer {
+      background: #111;
+      color: #aaa;
       text-align: center;
-      padding: 30px 20px;
-      color: #888;
+      padding: 20px;
       font-size: 14px;
     }
-    @keyframes shine {
-      0% { background-position: 0% center; }
-      100% { background-position: 200% center; }
-    }
+
     @media (max-width: 768px) {
-      header h1 { font-size: 40px; }
-      .gallery img { width: 100%; }
+      .hero h2 {
+        font-size: 30px;
+      }
+      .products {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Classico Vento</h1>
     <p>Where leather meets legacy</p>
@@ -97,43 +163,57 @@
 
   <nav>
     <a href="#about">About</a>
-    <a href="#collection">Collection</a>
-    <a href="#vision">Our Vision</a>
-    <a href="#contact">Contact</a>
+    <a href="#products">Collection</a>
+    <a href="#video">Experience</a>
+    <a href="#newsletter">Newsletter</a>
   </nav>
 
-  <section id="about">
-    <h2>About Us</h2>
+  <section class="hero">
+    <h2>Elegance in Every Stitch</h2>
+  </section>
+
+  <section class="section" id="about">
+    <h3>About Us</h3>
     <p>
-      Classico Vento is more than a brand — it is a movement of refined expression. Inspired by the soul of leather and built with a legacy mindset, we craft timeless designs that elevate style and confidence. Rooted in tradition and infused with modern flair, each jacket we produce stands as a mark of bold character.
+      At Classico Vento, every leather jacket is more than just a product—it's an experience. Designed for those who wear confidence, not trends. Born from craftsmanship and elevated by timeless design, we deliver fashion with substance.
     </p>
   </section>
 
-  <section id="collection">
-    <h2>Our Collection</h2>
-    <div class="gallery">
-      <img src="https://cdn.pixabay.com/photo/2016/11/29/09/06/leather-jacket-1866581_1280.jpg" alt="Black Leather Jacket">
-      <img src="https://cdn.pixabay.com/photo/2017/08/06/04/00/leather-jacket-2580510_1280.jpg" alt="Brown Leather Jacket">
-      <img src="https://cdn.pixabay.com/photo/2017/08/06/04/02/leather-jacket-2580511_1280.jpg" alt="Tan Leather Jacket">
+  <section class="section" id="products">
+    <h3>Our Signature Collection</h3>
+    <div class="products">
+      <div class="product">
+        <img src="https://i.imgur.com/O1Rm3kN.jpg" alt="Black Jacket">
+        <h4>Black Leather Jacket</h4>
+      </div>
+      <div class="product">
+        <img src="https://i.imgur.com/VwYQZwa.jpg" alt="Brown Jacket">
+        <h4>Brown Classic Rider</h4>
+      </div>
+      <div class="product">
+        <img src="https://i.imgur.com/eqPipzE.jpg" alt="Tan Jacket">
+        <h4>Tan Urban Vintage</h4>
+      </div>
     </div>
   </section>
 
-  <section id="vision">
-    <h2>Our Vision</h2>
-    <p>
-      At Classico Vento, we envision a world where fashion is not dictated by trends, but driven by authenticity. Our jackets are crafted for those who lead, inspire, and dare to be different. We believe in quality that lasts, in designs that speak without words, and in a style that transcends time.
-    </p>
+  <section class="video-section" id="video">
+    <video autoplay muted loop>
+      <source src="https://cdn.coverr.co/videos/coverr-man-in-leather-jacket-1028/1080p.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: support@classicovento.com</p>
-    <p>Instagram: @classico_vento</p>
-    <p>Phone: +91 98765 43210</p>
+  <section class="newsletter" id="newsletter">
+    <h3>Join Our Inner Circle</h3>
+    <p>Get the latest updates on launches, offers & style tips.</p>
+    <input type="email" placeholder="Enter your email">
+    <button>Subscribe</button>
   </section>
 
-  <footer>
-    &copy; 2025 Classico Vento. All rights reserved.
-  </footer>
+  <div class="footer">
+    &copy; 2025 Classico Vento. Designed with heart and heritage.
+  </div>
+
 </body>
 </html>
