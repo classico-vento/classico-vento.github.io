@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Classico Vento</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -13,141 +13,161 @@
     }
 
     body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #fff;
+      font-family: 'Inter', sans-serif;
+      background: #fff;
       color: #111;
-      scroll-behavior: smooth;
+      line-height: 1.6;
     }
 
-    header.hero {
-      background-color: #000;
+    .hero {
+      position: relative;
       height: 100vh;
+      overflow: hidden;
+    }
+
+    #bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .hero-text {
+      position: relative;
+      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      color: white;
       text-align: center;
-      color: #fff;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.5);
     }
 
-    .hero h1 {
+    .animated-text {
+      font-size: 3rem;
       font-family: 'Playfair Display', serif;
-      font-size: 64px;
-      color: #f6e27a;
-      animation: fadeDown 2s ease-out;
+      animation: fadeInUp 2s ease-in-out;
     }
 
-    .hero p {
-      font-size: 20px;
-      margin-top: 10px;
-      animation: fadeUp 2s ease-out;
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    @keyframes fadeDown {
-      from { opacity: 0; transform: translateY(-40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    section {
-      padding: 80px 20px;
-      max-width: 1200px;
-      margin: auto;
+    .section {
+      padding: 4rem 2rem;
       text-align: center;
     }
 
-    section h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
+    .section h2 {
       font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
 
-    section p {
-      font-size: 18px;
-      line-height: 1.7;
+    .about p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #333;
     }
 
-    .gallery {
+    .gallery-items {
       display: flex;
-      justify-content: center;
-      gap: 20px;
       flex-wrap: wrap;
-      margin-top: 40px;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
     }
 
-    .gallery img {
-      width: 300px;
-      border-radius: 8px;
-      transition: transform 0.3s ease;
+    .gallery-items div {
+      text-align: center;
+      max-width: 200px;
     }
 
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-
-    .video-section {
-      margin-top: 60px;
-    }
-
-    video {
+    .gallery-items img {
       width: 100%;
-      max-width: 800px;
-      border-radius: 10px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .legacy video {
+      margin-top: 2rem;
+      border-radius: 20px;
+      max-width: 100%;
     }
 
     footer {
-      background: #111;
-      color: #ccc;
-      padding: 40px 20px;
+      background-color: #111;
+      color: white;
       text-align: center;
-      font-size: 15px;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 40px;
-      }
-      section h2 {
-        font-size: 24px;
-      }
+      padding: 1rem;
     }
   </style>
 </head>
 <body>
 
+  <!-- Hero Background Video -->
   <header class="hero">
-    <h1>Classico Vento</h1>
-    <p>Where leather meets legacy</p>
+    <video autoplay muted loop id="bg-video">
+      <source src="https://cdn.pixabay.com/vimeo/774084511/jacket-132052.mp4?width=1280&hash=360b770298de6f4e5e4e9e667700452f20f99ac9" type="video/mp4">
+    </video>
+    <div class="hero-text">
+      <h1 class="animated-text">Classico Vento</h1>
+      <p>Redefining Premium Leatherwear</p>
+    </div>
   </header>
 
-  <section id="about">
+  <!-- About Section -->
+  <section class="section about">
     <h2>About Us</h2>
-    <p>At Classico Vento, we bring elegance and craftsmanship together. Every leather piece is created to stand the test of time while adding boldness to your personal style. Our jackets speak confidence and timeless charm.</p>
+    <p>
+      Classico Vento stands for timeless fashion and premium leather. Our jackets are crafted for those who value style, elegance, and authenticity.
+    </p>
   </section>
 
-  <section id="gallery">
+  <!-- Gallery Section -->
+  <section class="section gallery">
     <h2>Our Collection</h2>
-    <div class="gallery">
-      <img src="/mnt/data/acdd52ab-7788-41c1-a989-e7e1d7cd5f99.png" alt="Black Jacket">
-      <img src="/mnt/data/d5974623-8a3b-48b2-a30e-d78d05ac589c.png" alt="Brown Jacket">
-      <img src="/mnt/data/ce06012d-72fe-49f7-a7e6-69595e4e0951.png" alt="Tan Jacket">
+    <div class="gallery-items">
+      <div>
+        <img src="images/black-jacket.png" alt="Black Jacket" />
+        <p>Black Jacket</p>
+      </div>
+      <div>
+        <img src="images/brown-jacket.png" alt="Brown Jacket" />
+        <p>Brown Jacket</p>
+      </div>
+      <div>
+        <img src="images/tan-jacket.png" alt="Tan Jacket" />
+        <p>Tan Jacket</p>
+      </div>
     </div>
   </section>
 
-  <section class="video-section">
+  <!-- Legacy Video -->
+  <section class="section legacy">
     <h2>Behind the Legacy</h2>
-    <video controls>
-      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      Your browser does not support the video tag.
+    <video controls width="100%" class="legacy-video">
+      <source src="https://cdn.pixabay.com/vimeo/189444144/legacy-3781.mp4?width=1280&hash=c7352a463135e089cfc59e0f7112b7502db25dfb" type="video/mp4">
     </video>
   </section>
 
+  <!-- Footer -->
   <footer>
-    &copy; 2025 Classico Vento. All Rights Reserved.
+    <p>&copy; 2025 Classico Vento. All rights reserved.</p>
   </footer>
 
 </body>
