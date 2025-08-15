@@ -1,71 +1,204 @@
-import React from "react"; import { motion } from "framer-motion"; import { ArrowRight, Wind, Shield, Crown, Sparkles, Mail, Phone, MapPin } from "lucide-react"; import { Button } from "@/components/ui/button"; import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+<!doctype html>
 
-// --- Palette --- // Black: #0b0b0b | Charcoal: #1f1f1f | Ivory: #F5F1E7 | Gold: #CBA135 | Silver: #BFC3C5
-
-// Inline SVG logo (replace with your final logo when ready) const DVLogo = () => (
-
-  <div className="flex items-center gap-3">
-    <svg width="42" height="42" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"
-      className="drop-shadow-[0_0_20px_rgba(203,161,53,0.35)]">
-      <path d="M10 44c6-1 10-6 12-12 2-7 5-12 12-15 8-4 17-3 20-2-7 3-10 10-8 16 3 7 0 12-6 15-8 4-20 4-30-2Z" fill="#CBA135"/>
-      <path d="M18 46c5 0 10-3 13-8 4-6 3-13 7-16-6-2-14 1-18 8-3 5-4 12-2 16Z" fill="#0b0b0b"/>
-      <text x="30" y="52" fontSize="18" fontWeight="700" fill="#CBA135">DV</text>
-    </svg>
-    <div className="leading-tight">
-      <p className="text-xl font-semibold tracking-[0.2em] text-[#CBA135]">DON VENTO</p>
-      <p className="text-xs tracking-widest text-zinc-400">COMMAND THE WIND</p>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Don Vento — Leather. Power. Legacy.</title>
+  <meta name="description" content="Don Vento — Premium leather jackets and formal footwear. Command the Wind." />
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{--dv-black:#0b0b0b;--dv-char:#1f1f1f;--dv-ivory:#F5F1E7;--dv-gold:#CBA135;--dv-silver:#BFC3C5}
+    html{scroll-behavior:smooth}
+  </style>
+</head>
+<body class="bg-[var(--dv-black)] text-white font-sans">  <!-- NAV -->  <header class="sticky top-0 z-40 backdrop-blur bg-black/50 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-3">
+        <!-- Inline DV logo -->
+        <svg width="40" height="40" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="drop-shadow"><path d="M10 44c6-1 10-6 12-12 2-7 5-12 12-15 8-4 17-3 20-2-7 3-10 10-8 16 3 7 0 12-6 15-8 4-20 4-30-2Z" fill="#CBA135"/><path d="M18 46c5 0 10-3 13-8 4-6 3-13 7-16-6-2-14 1-18 8-3 5-4 12-2 16Z" fill="#0b0b0b"/><text x="30" y="52" font-size="18" font-weight="700" fill="#CBA135">DV</text></svg>
+        <div class="leading-tight">
+          <p class="text-base font-semibold tracking-[0.18em] text-[var(--dv-gold)]">DON VENTO</p>
+          <p class="text-[10px] tracking-widest text-zinc-400">COMMAND THE WIND</p>
+        </div>
+      </a>
+      <nav class="hidden sm:flex gap-6 text-sm text-zinc-300">
+        <a href="#products" class="hover:text-white">Products</a>
+        <a href="#features" class="hover:text-white">Why Don Vento</a>
+        <a href="#story" class="hover:text-white">Story</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
+      </nav>
+      <a href="#products" class="hidden sm:inline-block bg-[var(--dv-gold)] text-black px-4 py-2 rounded-full text-sm font-semibold">Shop Now</a>
+    </div>
+  </header>  <!-- HERO -->  <main id="top" class="relative">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-14 pb-20 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-[1.1]">Leather. Power. Legacy.</h1>
+        <p class="mt-4 text-zinc-300 max-w-xl">Italian attitude, engineered for the streets. Premium leather jackets and formal footwear for the modern gentleman warrior.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#products" class="bg-[var(--dv-gold)] hover:bg-[#b08f2e] text-black rounded-2xl px-6 py-3 text-sm font-semibold">Shop Jackets</a>
+          <a href="#products" class="border border-white/15 hover:bg-white/5 rounded-2xl px-6 py-3 text-sm">Shop Shoes</a>
+        </div>
+      </div>
+      <!-- Visual placeholder: replace src with your 2D illustration PNG (transparent) -->
+      <div class="relative aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 border border-white/10 grid place-items-center">
+        <div class="text-center px-6">
+          <div class="mx-auto mb-4 h-28 w-28 rounded-full border border-zinc-700 grid place-items-center text-[var(--dv-gold)]">DV</div>
+          <p class="text-zinc-300">Hero visual placeholder</p>
+          <p class="text-zinc-500 text-xs">Swap with your 2D silhouette image</p>
+        </div>
+      </div>
+    </section><!-- FEATURES -->
+<section id="features" class="bg-[var(--dv-black)] py-14 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <h2 class="text-2xl md:text-3xl font-semibold">Why Don Vento</h2>
+    <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="bg-[#111] rounded-2xl p-5 border border-white/10">
+        <p class="text-[var(--dv-gold)] font-semibold mb-1">Full‑grain leather</p>
+        <p class="text-sm text-zinc-400">Built to age beautifully with a tough, dense grain.</p>
+      </div>
+      <div class="bg-[#111] rounded-2xl p-5 border border-white/10">
+        <p class="text-[var(--dv-gold)] font-semibold mb-1">Italian design DNA</p>
+        <p class="text-sm text-zinc-400">Minimal lines. Assertive silhouette. Timeless hardware.</p>
+      </div>
+      <div class="bg-[#111] rounded-2xl p-5 border border-white/10">
+        <p class="text-[var(--dv-gold)] font-semibold mb-1">Precision craft</p>
+        <p class="text-sm text-zinc-400">Tight stitching, balanced patterns, supportive lasts.</p>
+      </div>
     </div>
   </div>
-);const Section = ({ id, children, className="" }) => (
+</section>
 
-  <section id={id} className={`w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 ${className}`}>{children}</section>
-);const Hero = () => (
-
-  <div className="relative bg-[#0b0b0b] text-white overflow-hidden">
-    <Section className="pt-20 pb-28">
-      <div className="flex flex-col md:flex-row items-center gap-10">
-        <motion.div initial={{opacity:0, y:20}} whileInView={{opacity:1, y:0}} transition={{duration:0.6}} className="flex-1">
-          <DVLogo/>
-          <h1 className="mt-6 text-4xl md:text-6xl font-bold tracking-tight">Leather. Power. Legacy.</h1>
-          <p className="mt-4 text-zinc-300 max-w-xl">Italian attitude, engineered for the streets. Premium leather jackets and formal footwear for the modern gentleman warrior.</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Button className="bg-[#CBA135] hover:bg-[#b08f2e] text-black rounded-2xl px-6 py-6 text-base">Shop Jackets <ArrowRight className="ml-2 h-4 w-4"/></Button>
-            <Button variant="outline" className="border-zinc-700 text-white hover:bg-zinc-900 rounded-2xl px-6 py-6 text-base">Shop Shoes <ArrowRight className="ml-2 h-4 w-4"/></Button>
+<!-- PRODUCTS -->
+<section id="products" class="bg-[#111] py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="flex items-end justify-between gap-4">
+      <h2 class="text-2xl md:text-3xl font-semibold">Featured Pieces</h2>
+      <a href="#" class="bg-[var(--dv-gold)] hover:bg-[#b08f2e] text-black rounded-2xl px-4 py-2 text-sm font-semibold">View All</a>
+    </div>
+    <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <!-- Card -->
+      <article class="rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+        <div class="aspect-[4/5] bg-gradient-to-br from-[#1f1f1f] to-[#0b0b0b] grid place-items-center">
+          <p class="text-xs text-zinc-400">Jacket image</p>
+        </div>
+        <div class="p-4 bg-[var(--dv-black)]">
+          <div class="flex items-center justify-between">
+            <p>Tempesta Rider</p>
+            <p class="text-[var(--dv-gold)]">₹19,990</p>
           </div>
-        </motion.div>
-        <motion.div initial={{opacity:0, scale:0.95}} whileInView={{opacity:1, scale:1}} transition={{duration:0.6}} className="flex-1 w-full">
-          {/* Look image placeholder */}
-          <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 shadow-2xl">
-            <div className="absolute inset-0 grid place-items-center">
-              <div className="text-center">
-                <div className="mx-auto mb-4 h-28 w-28 rounded-full border border-zinc-700 grid place-items-center">
-                  <Wind className="h-10 w-10 text-[#CBA135]"/>
-                </div>
-                <p className="text-zinc-300">Hero visual placeholder</p>
-                <p className="text-zinc-500 text-sm">Swap with your 2D illustration</p>
-              </div>
-            </div>
+        </div>
+      </article>
+      <article class="rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+        <div class="aspect-[4/5] bg-gradient-to-br from-[#1f1f1f] to-[#0b0b0b] grid place-items-center">
+          <p class="text-xs text-zinc-400">Jacket image</p>
+        </div>
+        <div class="p-4 bg-[var(--dv-black)]">
+          <div class="flex items-center justify-between">
+            <p>Cavaliere Classic</p>
+            <p class="text-[var(--dv-gold)]">₹16,990</p>
           </div>
-        </motion.div>
-      </div>
-    </Section>
+        </div>
+      </article>
+      <article class="rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+        <div class="aspect-[4/5] bg-gradient-to-br from-[#1f1f1f] to-[#0b0b0b] grid place-items-center">
+          <p class="text-xs text-zinc-400">Oxford image</p>
+        </div>
+        <div class="p-4 bg-[var(--dv-black)]">
+          <div class="flex items-center justify-between">
+            <p>Imperatore Oxford</p>
+            <p class="text-[var(--dv-gold)]">₹8,990</p>
+          </div>
+        </div>
+      </article>
+      <article class="rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+        <div class="aspect-[4/5] bg-gradient-to-br from-[#1f1f1f] to-[#0b0b0b] grid place-items-center">
+          <p class="text-xs text-zinc-400">Chelsea image</p>
+        </div>
+        <div class="p-4 bg-[var(--dv-black)]">
+          <div class="flex items-center justify-between">
+            <p>Falcone Chelsea</p>
+            <p class="text-[var(--dv-gold)]">₹9,990</p>
+          </div>
+        </div>
+      </article>
+    </div>
   </div>
-);const Feature = ({ icon:Icon, title, desc }) => ( <Card className="bg-[#111111] border-zinc-800 text-zinc-200 rounded-2xl"> <CardHeader className="pb-3"> <CardTitle className="flex items-center gap-3 text-lg"><Icon className="h-5 w-5 text-[#CBA135]"/>{title}</CardTitle> </CardHeader> <CardContent className="text-sm text-zinc-400">{desc}</CardContent> </Card> );
+</section>
 
-const Features = () => (
-
-  <div className="bg-[#0b0b0b] text-white py-16">
-    <Section>
-      <h2 className="text-2xl md:text-3xl font-semibold">Why Don Vento</h2>
-      <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-        <Feature icon={Shield} title="Full‑grain leather" desc="Built to age beautifully with a tough, dense grain."/>
-        <Feature icon={Crown} title="Italian design DNA" desc="Minimal lines. Assertive silhouette. Timeless hardware."/>
-        <Feature icon={Sparkles} title="Precision craft" desc="Tight stitching, balanced patterns, and supportive lasts."/>
-      </div>
-    </Section>
+<!-- STORY -->
+<section id="story" class="bg-[var(--dv-black)] py-20 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h2 class="text-2xl md:text-3xl font-semibold">Our Story</h2>
+      <p class="mt-4 text-zinc-300 leading-relaxed">Born from Italian elegance and street endurance, Don Vento builds the gentleman’s armor. Every panel is cut for movement, every seam locked for years, every last sculpted for balance. We don’t chase trends— we engineer presence.</p>
+      <a href="#products" class="inline-block mt-6 border border-white/15 hover:bg-white/5 rounded-2xl px-5 py-3 text-sm">Explore Products</a>
+    </div>
+    <div class="rounded-3xl border border-white/10 p-6 grid grid-cols-2 gap-4 text-sm">
+      <div class="p-4 bg-[#111] rounded-2xl">Full‑grain cowhide</div>
+      <div class="p-4 bg-[#111] rounded-2xl">YKK hardware</div>
+      <div class="p-4 bg-[#111] rounded-2xl">Goodyear welt (shoes)</div>
+      <div class="p-4 bg-[#111] rounded-2xl">Italian lasts</div>
+    </div>
   </div>
-);const ProductCard = ({ name, tag, price }) => ( <Card className="rounded-2xl overflow-hidden border-zinc-200/10 bg-white/5 backdrop-blur"> <CardContent className="p-0"> <div className="aspect-[4/5] bg-[linear-gradient(135deg,_#1f1f1f,_#0b0b0b)] grid place-items-center"> <div className="text-center"> <div className="mx-auto h-16 w-16 rounded-full border border-zinc-600 grid place-items-center"> <span className="text-[#CBA135] font-semibold">{tag}</span> </div> <p className="mt-3 text-xs text-zinc-400">Image Placeholder</p> </div> </div> <div className="p-4 bg-[#0b0b0b] text-zinc-100"> <div className="flex items-center justify-between"> <p className="font-medium">{name}</p> <p className="text-[#CBA135]">{price}</p> </div> </div> </CardContent> </Card> );
+</section>
 
+<!-- NEWSLETTER / CONTACT -->
+<section id="contact" class="bg-[#111] py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="rounded-3xl border border-white/10 p-8 md:p-12 bg-[var(--dv-black)] grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h3 class="text-xl md:text-2xl font-semibold">Join the Don Vento circle</h3>
+        <p class="text-zinc-400 mt-2">Early drops, limited runs, private invites.</p>
+      </div>
+      <form onsubmit="event.preventDefault(); alert('Thanks! We\'ll be in touch.');" class="flex gap-3 w-full">
+        <input type="email" required placeholder="Your email" class="flex-1 rounded-2xl bg-[#111] border border-white/15 px-4 py-3 text-sm outline-none focus:border-[var(--dv-gold)]"/>
+        <button type="submit" class="bg-[var(--dv-gold)] hover:bg-[#b08f2e] text-black rounded-2xl px-5 text-sm font-semibold">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+  </main>  <!-- FOOTER -->  <footer class="bg-[var(--dv-black)] text-zinc-400 py-10 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-3 gap-8 items-start">
+      <div class="space-y-3">
+        <div class="flex items-center gap-3">
+          <svg width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 44c6-1 10-6 12-12 2-7 5-12 12-15 8-4 17-3 20-2-7 3-10 10-8 16 3 7 0 12-6 15-8 4-20 4-30-2Z" fill="#CBA135"/><path d="M18 46c5 0 10-3 13-8 4-6 3-13 7-16-6-2-14 1-18 8-3 5-4 12-2 16Z" fill="#0b0b0b"/></svg>
+          <p class="text-sm">Tough fashion for the modern gentleman.</p>
+        </div>
+        <p class="text-xs">© <span id="year"></span> Don Vento</p>
+      </div>
+      <div class="grid grid-cols-2 gap-6 text-sm">
+        <div>
+          <p class="text-white mb-3">Explore</p>
+          <ul class="space-y-2">
+            <li><a href="#products" class="hover:text-white">Jackets</a></li>
+            <li><a href="#products" class="hover:text-white">Chelsea</a></li>
+            <li><a href="#products" class="hover:text-white">Oxford</a></li>
+            <li><a href="#story" class="hover:text-white">Story</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-white mb-3">Policy</p>
+          <ul class="space-y-2">
+            <li>Shipping</li>
+            <li>Returns</li>
+            <li>Warranty</li>
+          </ul>
+        </div>
+      </div>
+      <div class="space-y-2 text-sm">
+        <p class="text-white">Contact</p>
+        <p>support@donvento.com</p>
+        <p>+91 98xx-xxx-xxx</p>
+        <p>New Delhi, IN</p>
+      </div>
+    </div>
+    <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+  </footer>
+</body>
+</html>
 const Products = () => (
 
   <div className="bg-[#111111] text-white py-16">
@@ -161,3 +294,4 @@ const Products = () => (
 );export default function DonVentoSite(){ return ( <main className="min-h-screen bg-[#0b0b0b] text-white font-[system-ui,Segoe UI,Inter,Roboto]"> <Hero/> <div id="products"><Products/></div> <div id="story"><Story/></div> <Newsletter/> <Footer/> {/* Floating CTA */} <a href="#products" className="fixed bottom-6 right-6"> <Button className="rounded-full px-6 py-6 bg-[#CBA135] text-black shadow-xl hover:bg-[#b08f2e]">Shop Now</Button> </a> </main> ); }
 
     
+
